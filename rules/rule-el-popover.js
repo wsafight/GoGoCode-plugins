@@ -1,13 +1,13 @@
-module.exports = function (ast, options, $) {
+module.exports = function (ast) {
     const platform = process.env.platform
     return ast
         .find('<template></template>')
         .replace(
-            `<template platform="$_$platform">$_$</template>`,
+            `<template platform="$_$platform">$_$content</template>`,
             match => {
                 const isMatchPlatform = match['platform'][0].value === platform
-                console.log(isMatchPlatform ? match[0][0].value : '')
-                return isMatchPlatform ?  match[0][0].value.trim() : ''
-            })
-        .root('sfc');
+                return isMatchPlatform ? match['content'][0].value.trim() : ''
+            }
+        )
+        .root('sfc')
 }

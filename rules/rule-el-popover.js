@@ -1,17 +1,13 @@
-module.exports = function (ast) {
+module.exports = function (ast, options, $) {
+    const platform = process.env.platform
     return ast
         .find('<template></template>')
         .replace(
-            `<el-popover open-delay="$_$" $$$1>$$$2</el-popover>`,
-            `<el-popover show-after="$_$" $$$1>$$$2</el-popover>`
-        )
-        .replace(
-            `<el-popover close-delay="$_$" $$$1>$$$2</el-popover>`,
-            `<el-popover hide-after="$_$" $$$1>$$$2</el-popover>`
-        )
-        .replace(
-            `<el-popover hide-after="$_$" $$$1>$$$2</el-popover>`,
-            `<el-popover auto-close="$_$" $$$1>$$$2</el-popover>`
-        )
+            `<template platform="$_$platform">$_$</template>`,
+            match => {
+                const isMatchPlatform = match['platform'][0].value === platform
+                console.log(isMatchPlatform ? match[0][0].value : '')
+                return isMatchPlatform ?  match[0][0].value.trim() : ''
+            })
         .root('sfc');
-};
+}

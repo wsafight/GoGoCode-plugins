@@ -11,6 +11,6 @@ module.exports = function (fileInfo, api, options) {
     const sourceCode = fileInfo.source
     const $ = api.gogocode
     const ast = $(sourceCode, { parseOptions: { language: 'vue' } })
-    const outAst = rules.reduce((ast, rule) => rule(ast, options), ast)
+    const outAst = rules.reduce((ast, rule) => rule(ast, options, $), ast)
     return outAst.generate()
 };

@@ -1,5 +1,11 @@
 <template>
   <div>
+    <template platform="taobao">
+      <button>11111</button>
+    </template>
+    <template platform="tianmao">
+      <button>22222</button>
+    </template>
     <el-popover
       open-delay="10"
       hide-after="500"
@@ -18,7 +24,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
+import Vue from 'vue'; //
 export default {
   name: 'v-for 中的 Ref 数组',
   data() {
@@ -29,3 +35,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.bb {
+  color: red; /*### if */
+}
+</style>

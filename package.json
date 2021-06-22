@@ -3,7 +3,7 @@
   "version": "0.0.10",
   "description": "gogocode-plugin-sample",
   "scripts": {
-    "start": "node ./test/run.js"
+    "start": "cross-env platform=taobao node ./test/run.js"
   },
   "keywords": [
     "gogocode",
@@ -17,6 +17,7 @@
     "node": "*"
   },
   "devDependencies": {
-    "gogocode": "^0.2.29"
+    "gogocode": "^1.0.3",
+    "cross-env": "^7.0.3"
   }
 }

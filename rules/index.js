@@ -1,3 +1,3 @@
-const ruleA = require('./rule-el-popover')
+const ruleConditionCompile = require('./rule-condition-compile')
 
-module.exports = [ruleA]
+module.exports = [ruleConditionCompile]

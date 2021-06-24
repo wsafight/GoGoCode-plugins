@@ -3,7 +3,7 @@
   "version": "0.0.10",
   "description": "gogocode-plugin-sample",
   "scripts": {
-    "start": "cross-env platform=taobao node ./test/run.js"
+    "start": "cross-env platform=wx node ./test/run.js"
   },
   "keywords": [
     "gogocode",

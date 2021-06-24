@@ -2,7 +2,7 @@
     <div>
       <button>11111</button>
     
-      <el-popover open-delay="10" hide-after="500" title="标题" width="200" content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。" v-model="visible">
+      <el-popover open-delay="10"    hide-after="500"    title="标题"    width="200"    content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。"    v-model="visible">
         <el-button slot="reference" @click="visible = !visible">手动激活</el-button>
       </el-popover>
       <ul>
@@ -13,7 +13,11 @@
     </div>
 </template>
 <script>
-import Vue from 'vue'; //
+import Vue from 'vue';
+import TestA from "@actions/wx/testA"
+import TestB from '@actions/b/cc'
+import TestC from "@actions/wx/c/dd"
+
 export default {
   name: 'v-for 中的 Ref 数组',
   data() {

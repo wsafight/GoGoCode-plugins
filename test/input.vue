@@ -1,9 +1,9 @@
 <template>
   <div>
-    <template platform="taobao">
+    <template platform="wx">
       <button>11111</button>
     </template>
-    <template platform="tianmao">
+    <template platform="my">
       <button>22222</button>
     </template>
     <el-popover
@@ -24,7 +24,11 @@
 </template>
 
 <script>
-import Vue from 'vue'; //
+import Vue from 'vue';
+import TestA from '@actions/testA'
+import TestB from '@actions/b/cc'
+import TestC from '@actions/c/dd'
+
 export default {
   name: 'v-for 中的 Ref 数组',
   data() {

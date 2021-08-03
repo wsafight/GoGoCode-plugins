@@ -12,7 +12,9 @@
   "main": "transform.js",
   "author": "chibing",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "find-up": "^5.0.0"
+  },
   "engines": {
     "node": "*"
   },

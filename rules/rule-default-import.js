@@ -34,14 +34,7 @@ module.exports = function (ast) {
             const filePath = match['filepath'][0].value
             if (filePath.startsWith('@actions')) {
                 const file = path.join(actionsDir, `/${platform}/${filePath.replace('@actions', '')}`)
-                // try {
-                //     // Check whether the file exists. No exception is thrown
-                //     fs.accessSync(file)
-                //     // Replace imported path
-                //     match['filepath'][0].node.value = filePath.replace('@actions', `@actions/${platform}`)
-                // } catch (err) {
-                //     console.error(`cannot find file ${file}`)
-                // }
+
                 const hasFile = filePaths.some(path => {
                     if (path === file) {
                         return true
